@@ -1,0 +1,41 @@
+/* Estilos para el contenedor del formulario */
+.impresora-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el formulario */
+.impresora-form {
+  margin-top: 120px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos para las etiquetas */
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Estilos para los controles de formulario */
+.form-control {
+  margin-bottom: 15px;
+}
+
+/* Estilos para el botón de enviar */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
