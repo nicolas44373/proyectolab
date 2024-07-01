@@ -1,3 +1,21 @@
+:root {
+  --colorText-Principal: #333;
+  --colorTextHover-Principal: #6D6D6D;
+  --colorBorder-Principal: #D3D3D3;
+  --colorBackground: #F9F9F9;
+  --colorAccent: #007BFF;
+  --colorAccentHover: #0056b3;
+  --colorWhite: #FFFFFF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--colorBackground);
+  color: var(--colorText-Principal);
+  margin: 0;
+  padding: 0;
+}
+
 /*----------------------------------------------------------
 Modal Login and Register
 ----------------------------------------------------------*/
@@ -5,7 +23,12 @@ Modal Login and Register
   position: relative;
   top: 30px;
   max-width: 950px;
-  height: 400px;
+  height: auto;
+  background-color: var(--colorWhite);
+  border: 2px solid var(--colorBorder-Principal);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 /*----------------------------------------------------------
@@ -17,9 +40,13 @@ Modal Login and Register
   align-items: center;
   text-align: center;
   padding: 15px 20px;
+  border-bottom: 2px solid var(--colorBorder-Principal);
 }
+
 .Modal-Header .Modal-Title {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--colorAccent);
 }
 
 /*----------------------------------------------------------
@@ -30,89 +57,119 @@ Modal Login and Register
   place-items: center;
   margin-top: 20px;
 }
+
 /*-----------------------------------
   Modal Body - Formulary
 ------------------------------------*/
 .Modal-Body .Form {
   width: 70%;
 }
+
 /*-----------------------------------
  Modal Body - Formulary - Form Group
 ------------------------------------*/
-.Modal-Body .Form .Form-Group{
-  margin: -5px 0px;
+.Modal-Body .Form .Form-Group {
+  margin: 15px 0px;
 }
+
 .Modal-Body .Form .Form-Group .Form-Label {
   position: relative;
   top: 8px;
   left: 13px;
-  background-color: white;
+  background-color: var(--colorWhite);
   padding: 0 10px;
   font-weight: bold;
-  font-size: 13px;
-  color: #757575;
+  font-size: 1em;
+  color: var(--colorText-Principal);
   z-index: 2;
 }
+
 .Modal-Body .Form .Form-Group .Form-Control {
   position: relative;
   top: -8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--colorBorder-Principal);
   border-radius: 4px;
-  padding: 8px;
+  padding: 10px;
   width: 100%;
   z-index: 1;
+  font-size: 1em;
+  transition: border-color 0.3s;
 }
+
+.Modal-Body .Form .Form-Group .Form-Control:focus {
+  border-color: var(--colorAccent);
+  outline: none;
+}
+
 /*--------------------------------------------
  Modal Body - Formulary - Container Buttons 
 --------------------------------------------*/
 .Form-Container-Buttons {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px;
+  margin: 20px 0;
 }
+
 /*------------------------------------------------------------
  Modal Body - Formulary - Container Buttons - Submit Button
 ------------------------------------------------------------*/
 .Form-Container-Buttons .Form-Submit-Button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--colorAccent);
+  color: var(--colorWhite);
   border: 2px solid transparent;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
 }
+
 .Form-Container-Buttons .Form-Submit-Button:hover {
-  border: 2px solid #007bff;
+  border: 2px solid var(--colorAccent);
   background-color: transparent;
-  color: #007bff;
+  color: var(--colorAccent);
 }
+
 /*------------------------------------------------------------
  Modal Body - Formulary - Container Buttons - Button Google
 ------------------------------------------------------------*/
 .Form-Container-Buttons .btn-google {
-  border: 2px solid #ccc; 
-  background-color: #ffffff; 
-
+  border: 2px solid var(--colorBorder-Principal); 
+  background-color: var(--colorWhite); 
   width: 130px;
   height: 50px;
   color: #757575; 
-  cursor: pointer;  
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
+
 .Form-Container-Buttons .btn-google:hover {
-  background-color: #ffffff;
+  background-color: var(--colorBackground);
 }
 
 /*----------------------------------------------------------
   Modal Footer 
 ----------------------------------------------------------*/
 .Modal-Footer {
-
+  padding: 15px 20px;
+  border-top: 2px solid var(--colorBorder-Principal);
+  text-align: center;
 }
+
 .Form-Link-Button {
-  color: #007bff;
-  text-decoration: none ;
+  color: var(--colorAccent);
+  text-decoration: none;
   font-size: 1em;
   font-weight: 700;
   cursor: pointer;
 }
 
-
+.Form-Link-Button:hover {
+  color: var(--colorAccentHover);
+  text-decoration: underline;
+}

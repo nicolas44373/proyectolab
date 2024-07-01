@@ -12,8 +12,7 @@ function HomeClient() {
   };
 
   const handleNavigateToProductList = () => {
-    // Verificar la clave antes de redirigir
-    if (clave === 'admin') { // Reemplaza 'tuclave' con tu clave real
+    if (clave === 'admin') { 
       navigate('/impresora');
     } else {
       setError('Clave incorrecta. Inténtalo de nuevo.');
@@ -26,7 +25,7 @@ function HomeClient() {
 
   return (
     <div className="contentHomeClient">
-      <h1 className="titleHomeClient">fotocopia</h1>
+      <h1 className="titleHomeClient">Fotocopier</h1>
 
       <div className="contentHome">
         {/* Catálogo de Precios */}
@@ -49,11 +48,16 @@ function HomeClient() {
         </section>
 
         {/* Panel de Impresoras/Fotocopiadoras */}
-        <section className="PPP3 cards panel-pedido-productos" onClick={handleNavigateToProductList}>
+        <section className="PPP3 cards panel-pedido-productos">
           <h2>Panel de Impresoras/Fotocopiadoras</h2>
           <p>Aquí irá el contenido del panel de Máquinas.</p>
           <div className="clave-input">
-            <input type="password" placeholder="Ingrese la clave" value={clave} onChange={handleChangeClave} />
+            <input
+              type="password"
+              placeholder="Ingrese la clave"
+              value={clave}
+              onChange={handleChangeClave}
+            />
             <button onClick={handleNavigateToProductList}>Acceder</button>
             {error && <p className="error-message">{error}</p>}
           </div>
@@ -62,17 +66,21 @@ function HomeClient() {
         {/* Información Adicional */}
         <section className="IA4">
           <h2>Bienvenidos a Fotocopier</h2>
-          <h4>
-En Fotocopier, nos enorgullece ofrecer servicios de fotocopiado y soluciones de impresión de alta calidad. Somos una empresa dedicada a satisfacer las necesidades de nuestros clientes con rapidez, precisión y atención personalizada.
-
-Nuestros Servicios
-Fotocopiado y Escaneado: Ofrecemos servicios de fotocopiado y escaneado de documentos en blanco y negro y a color. Utilizamos equipos de última generación para garantizar la mejor calidad en cada copia.
-Impresión Digital: Imprimimos desde pequeños volúmenes hasta grandes tiradas con la misma calidad y precisión. Ideal para trabajos escolares, presentaciones empresariales y proyectos creativos.
-Anillado y Encuadernación: Proporcionamos servicios de anillado y encuadernación para dar un toque profesional a tus documentos y presentaciones.
-Impresión de Tarjetas y Folletos: Diseñamos e imprimimos tarjetas de presentación, folletos, flyers y más, ayudando a nuestros clientes a destacarse en cualquier evento o campaña publicitaria.
-Servicio de Envío por Correo Electrónico: Facilitamos el envío de documentos impresos y escaneados directamente a tu correo electrónico, ahorrándote tiempo y esfuerzo.
-Nuestra Misión
-En Fotocopier, nuestra misión es proporcionar servicios de fotocopiado y soluciones de impresión que superen las expectativas de nuestros clientes. Nos comprometemos a ofrecer productos de alta calidad, tiempos de entrega rápidos y precios competitivos.</h4>
+          <p>
+            En Fotocopier, nos enorgullece ofrecer servicios de fotocopiado y soluciones de impresión de alta calidad. Somos una empresa dedicada a satisfacer las necesidades de nuestros clientes con rapidez, precisión y atención personalizada.
+          </p>
+          <h3>Nuestros Servicios</h3>
+          <ul>
+            <li><strong>Fotocopiado y Escaneado:</strong> Ofrecemos servicios de fotocopiado y escaneado de documentos en blanco y negro y a color. Utilizamos equipos de última generación para garantizar la mejor calidad en cada copia.</li>
+            <li><strong>Impresión Digital:</strong> Imprimimos desde pequeños volúmenes hasta grandes tiradas con la misma calidad y precisión. Ideal para trabajos escolares, presentaciones empresariales y proyectos creativos.</li>
+            <li><strong>Anillado y Encuadernación:</strong> Proporcionamos servicios de anillado y encuadernación para dar un toque profesional a tus documentos y presentaciones.</li>
+            <li><strong>Impresión de Tarjetas y Folletos:</strong> Diseñamos e imprimimos tarjetas de presentación, folletos, flyers y más, ayudando a nuestros clientes a destacarse en cualquier evento o campaña publicitaria.</li>
+            <li><strong>Servicio de Envío por Correo Electrónico:</strong> Facilitamos el envío de documentos impresos y escaneados directamente a tu correo electrónico, ahorrándote tiempo y esfuerzo.</li>
+          </ul>
+          <h3>Nuestra Misión</h3>
+          <p>
+            En Fotocopier, nuestra misión es proporcionar servicios de fotocopiado y soluciones de impresión que superen las expectativas de nuestros clientes. Nos comprometemos a ofrecer productos de alta calidad, tiempos de entrega rápidos y precios competitivos.
+          </p>
         </section>
       </div>
     </div>

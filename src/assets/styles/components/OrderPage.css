@@ -1,63 +1,102 @@
+:root {
+  --colorText-Principal: #333;
+  --colorTextHover-Principal: #555;
+  --colorBorder-Principal: #C0C0C0;
+  --colorBackground: #FFFFFF;
+  --colorBackgroundHover: #F2F2F2;
+  --colorAccent: #007BFF;
+  --colorAccentHover: #0056b3;
+  --colorShadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--colorBackground);
+  color: var(--colorText-Principal);
+  margin: 0;
+  padding: 0;
+}
+
 .order-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .order-form {
-    margin-top: 80px;
-    margin-bottom: 40px;
-    width: 600px;
-    max-width: 90%;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.349);
-  }
-  
-  .order-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .order-form .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .order-form label {
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .order-form input[type="file"] {
-    margin-top: 8px;
-  }
-  
-  .order-form .form-control {
-    margin-bottom: 10px; /* Espacio inferior */
-    margin-top: 10px; /* Espacio superior */
-    width: 100%; /* Ajustar al ancho completo del contenedor */
-    max-width: 100%; /* Ancho máximo permitido */
-    height: auto; /* Altura automática según el contenido */
-    padding: 10px; /* Añadir relleno */
-    box-sizing: border-box; /* Incluir padding en el ancho total */
-  }
-  
-  .order-form .form-control:focus {
-    border-color: #80bdff; /* Cambiar color del borde al enfocar */
-    outline: 0; /* Quitar el contorno al enfocar */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Efecto de sombra al enfocar */
-  }
-  
-  .order-form select {
-    width: 100%;
-    margin-top: 8px;
-  }
-  
-  .order-form button[type="submit"] {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorBackground);
+  padding: 20px;
+}
+
+.order-form {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  background-color: var(--colorBackground);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px var(--colorShadow);
+}
+
+.order-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--colorAccent);
+}
+
+.order-form .form-group {
+  margin-bottom: 20px;
+}
+
+.order-form label {
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+}
+
+.order-form input[type="file"] {
+  margin-top: 8px;
+}
+
+.order-form .form-control {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--colorBorder-Principal);
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-form .form-control:focus {
+  border-color: var(--colorAccent);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.order-form select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid var(--colorBorder-Principal);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.order-form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--colorAccent);
+  color: var(--colorBackground);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form button[type="submit"]:hover {
+  background-color: var(--colorAccentHover);
+}

@@ -85,7 +85,7 @@ const OrderPage = () => {
           <Form.Control type="file" name="archivo" onChange={handleFileChange} required />
           <Form.Control type="text" name="nombreArchivo" placeholder="Nombre del archivo" value={documento.nombreArchivo} onChange={handleDocumentoChange} required />
           <Form.Control type="number" name="cantidadHojas" placeholder="Cantidad de hojas" value={documento.cantidadHojas} onChange={handleDocumentoChange} required />
-          <Form.Check type="checkbox" label="Implementación con IA" name="implementacionIA" checked={documento.implementacionIA} onChange={handleDetallesImpresionChange} />
+          
         </Form.Group>
 
         <Form.Group controlId="formDetallesImpresion">
